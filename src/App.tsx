@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ButtonContainer from "./components/ButtonContainer";
+import OutputContainer from "./components/OutputContainer";
+import InputContainer from "./components/InputContainer";
 
 function App() {
+  const [calculatorValue, setCalculatorValue] = useState<any>("");
+  const [output, setoutput] = useState<any>(0);
+
+  const valueOnchange = (e: any) => {
+    setCalculatorValue(e.target.value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <Header />
+        <div className="main">
+          <InputContainer
+            calculatorValue={calculatorValue}
+            valueOnchange={valueOnchange}
+          />
+          <ButtonContainer
+            setoutput={setoutput}
+            calculatorValue={calculatorValue}
+            output={output}
+            setCalculatorValue={setCalculatorValue}
+          />
+          <OutputContainer output={output} />
+        </div>
+
+        <Footer />
+      </div>
     </div>
   );
 }

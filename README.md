@@ -1,6 +1,16 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple calculator with arithmetic operators such as additon, substraction, multiplication, division.
+
+Stack
+
+- React Js
+- Node Js
+- HTML 5
+- Css 3
+- Sass
+- Material UI
+- Bootstrap
 
 ## Available Scripts
 
