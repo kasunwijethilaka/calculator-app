@@ -5,6 +5,7 @@ This is a simple calculator with arithmetic operators such as additon, substract
 Stack
 
 - React Js
+- TypeScript
 - Node Js
 - HTML 5
 - Css 3
